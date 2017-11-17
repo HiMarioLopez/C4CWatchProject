@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context="com.example.mario.c4cwatchproject.MainActivity"
+    tools:deviceIds="wear">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boxedEdges="all">
+
+        <ImageButton
+            android:id="@+id/happyButton"
+            android:layout_width="185dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:onClick="happyClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/happy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/sadButton"
+            android:layout_width="185dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:onClick="sadClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/happyButton"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.wear.widget.BoxInsetLayout>
+
